@@ -1,6 +1,6 @@
 var http = require('http');
 var sys = require('sys');
-var fs = require('fs');
+//var fs = require('fs');
 
 http.createServer(function(req, res) {
   //debugHeaders(req);
@@ -14,7 +14,7 @@ http.createServer(function(req, res) {
     }
   } else {
     res.writeHead(200, {'Content-Type': 'text/html'});
-    res.write(fs.readFileSync(__dirname + '/sse.html'));
+    //res.write(fs.readFileSync(__dirname + '/sse.html'));
     res.end();
   }
 }).listen(process.env.PORT);
